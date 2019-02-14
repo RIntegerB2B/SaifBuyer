@@ -9,26 +9,33 @@ import { Ads } from './../../shared/model/ads.model';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  bannerModel: Banner;
-  adsProductModel: Ads;
+  bannerModel = [ {bannerImage: './../assets/images/pro1.jpg'},
+   {bannerImage: './../assets/images/pro2.jpg'}, {bannerImage: './../assets/images/pro3.jpg'} ];
+  adsProductModel = [{bannerImage: './../assets/images/prod001.jpg'},
+   {bannerImage: './../assets/images/prod002.jpg'},
+   {bannerImage: './../assets/images/prod003.jpg'},
+   {bannerImage: './../assets/images/prod004.jpg'}, {bannerImage: './../assets/images/prod001.jpg'},
+   {bannerImage: './../assets/images/prod002.jpg'},
+   {bannerImage: './../assets/images/prod003.jpg'},
+   {bannerImage: './../assets/images/prod004.jpg'} ];
   constructor(private homeService: HomeService) { }
 
   ngOnInit() {
-    this.getAllBanner();
-    this.getAllProductAdds();
+    /* this.getAllBanner();
+    this.getAllProductAdds(); */
   }
-  getAllBanner() {
+  /* getAllBanner() {
     this.homeService.getBanners().subscribe(data => {
       this.bannerModel = data;
     }, err => {
       console.log(err);
     });
-  }
-  getAllProductAdds() {
+  } */
+  /* getAllProductAdds() {
     this.homeService.getAds().subscribe(data => {
       this.adsProductModel = data;
     }, err => {
       console.log(err);
     });
-  }
+  } */
 }
