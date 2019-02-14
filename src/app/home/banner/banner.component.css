@@ -1,0 +1,20 @@
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  
+  .carousel-control-next, .carousel-control-prev{
+  background-color: hsla(0, 0%, 100%, .98);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.11);
+  width: 5%;
+  height: 20%;
+  top: calc(50% - 52px);
+}
+
+.gridRow {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+  margin: 0.5%;
+  background-color: #fff;
+  border-radius: 3px;
+}

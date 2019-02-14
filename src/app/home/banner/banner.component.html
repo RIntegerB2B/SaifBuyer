@@ -1,0 +1,43 @@
+<div id="carouselId" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" [ngClass]="{'active' : i == 0}"
+     *ngFor="let banner of bannerModel; let i = index">
+
+      <img class="img-fluid" [src]="banner.bannerImage" style="height: 280px; width: 100%">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselId" data-slide="prev">
+    <span>
+      <svg width="14.6" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="">
+        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="dark"></path>
+      </svg>
+    </span>
+  </a>
+  <a class="carousel-control-next" href="#carouselId" data-slide="next">
+    <span>
+      <svg width="14.6" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="rightArrow">
+        <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="dark"></path>
+      </svg>
+    </span>
+  </a>
+</div>
+<div class="container-fluid">
+  <div class='row'>
+    <div class='col-sm-12'>
+      <h1>
+        Promotion
+      </h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-4' *ngFor="let data of adsProductModel; let i = index">
+      <div *ngIf="i < 3">
+        <mat-card>
+          <img class="img-fluid" [src]="data.name">
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<app-product [adsProductModel]="adsProductModel"></app-product>
+<app-footer></app-footer>
