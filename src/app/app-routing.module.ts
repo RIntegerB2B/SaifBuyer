@@ -10,6 +10,11 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: './home/home.module#HomeModule'
   },
+  {
+    path: '',
+    redirectTo: 'welcome/banner',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
