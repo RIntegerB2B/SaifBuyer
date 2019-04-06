@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     MatIconModule
